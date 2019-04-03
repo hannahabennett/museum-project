@@ -1,0 +1,41 @@
+<nav class="navbar">
+  <a class="navbar-brand" href="#">
+    <img src="/assets/img/general-logo.png" height="80" class="d-inline-block align-top" alt="">
+  </a>
+</nav>
+<div class="wrapper fadeInDown">
+  <div class="container-fluid">
+    <div class="card text-center">
+      <h5 class="card-header"><i class="far fa-user-circle"></i>Login</h5>
+      <div class="card-body">
+						<form class="card-text" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+								<div class="form-group">
+										<mat-form-field>
+												<input matInput type="text" formControlName="username" class="form-control fadeIn second" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" placeholder="Username">
+												<div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+														<div *ngIf="f.username.errors.required">Username is required</div>
+												</div>
+											</mat-form-field>
+								</div>
+								<div class="form-group">
+										<mat-form-field>
+												<input matInput type="password" formControlName="password" class="form-control fadeIn second" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Password">
+												<div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+														<div *ngIf="f.password.errors.required">Password is required</div>
+												</div>
+											</mat-form-field>
+										<!-- <label for="password">Password</label>
+										<input type="password" formControlName="password" class="form-control fadeIn third" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+										<div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+												<div *ngIf="f.password.errors.required">Password is required</div>
+										</div> -->
+								</div>
+								<div class="form-group">
+										<button [disabled]="loading" class="btn btn-primary fadeIn fourth" style="margin-right:20px;">Login</button>
+										<a [routerLink]="['/register']" class="btn btn-primary fadeIn fifth" style="color:white;">Register</a>
+								</div>
+						</form> 
+      </div>
+    </div>
+  </div>
+</div>

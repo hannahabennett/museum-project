@@ -1,0 +1,46 @@
+/*Header Styling */
+.navbar {
+    background-color: #7E7A79;
+}
+#museum-title {
+    background-color: #606060;
+    height: 100px;
+}
+h1 {
+    color: white;
+    font-size: 70px;
+    font-family: 'Trade Gothic LT Bold Condensed';
+    margin-left: 5px;
+    margin-right: 5px;
+}
+/* Form Styling */
+.card {
+    width: 60%;
+    margin: 0 auto;
+    float: none;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.btn {
+    background-color: #840705;
+    border: #840705;
+    margin: 20px;
+}
+/* Angular Material Overriding Styling */
+::ng-deep.mat-form-field-ripple{
+    background-color: #840705!important;
+}
+::ng-deep.mat-form-field-label{
+  color: #840705!important;
+  font-weight: bold !important;
+}
+::ng-deep.mat-form-field-infix {
+    width: 250px !important;
+}
+::ng-deep.mat-checkbox-checked.mat-primary .mat-checkbox-background {
+    background-color: #840705 !important;
+}

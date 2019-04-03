@@ -1,0 +1,50 @@
+<!-- Header Section -->
+<div class="container-fluid">
+    <nav class="navbar">
+      <img src="/assets/img/gorgas-logo.png" height="100px" class="img-responsive" alt="">
+      <a [routerLink]="['/home']" class="btn btn-primary" id="home-btn">Home</a>
+    </nav>
+  </div>
+  <div class="container-fluid" id="museum-title">
+    <h1 align="center">Moundville Archaeological Park</h1>
+  </div>
+  <div class="container-fluid" style="padding-top: 60px;">
+    <div class="container">
+      <div class="table-responsive" style="height:900px; overflow-x:auto; overflow-y:auto">
+        <table class="table table-bordered table-hover" style="background-color: #ebebeb;" id="visitor-table">
+          <thead style="background-color: #840705; color: white;">
+              <tr>
+            
+                  <th class="firstName">First Name</th>
+                  <th class="lastName">Last Name</th>
+                  <th class="emailAddress">Email Address</th>
+                  <th class="zipCode">Zip Code</th>
+                  <th class="groupSize">Group Size</th>
+                  <th class="guestType">Guest Type</th>
+                  <th class="howDidYouHearAboutUs">How Did You Hear About Us?</th>
+                  <th class="country">Country</th>
+                  <th class="className">Class Name</th>
+                  <th class="professorName">Professor</th>
+                  <!-- <th>Actions</th> -->
+                </tr>
+          </thead>
+          <tbody *ngFor="let visitor of visitors">
+            <tr >
+              <td>{{ visitor.firstName}} </td>
+              <td>{{ visitor.lastName}}</td>
+              <td>{{ visitor.emailAddress}} </td>
+              <td>{{ visitor.zipCode}}</td>
+              <td>{{ visitor.groupSize}} </td>
+              <td>{{ visitor.guestType}}</td>
+              <td>{{ visitor.howDidYouHearAboutUs}} </td>
+              <td>{{ visitor.country}}</td>
+              <td>{{ visitor.className}} </td>
+              <td>{{ visitor.professorName}}</td>
+              <!-- <td> <a class="btn" (click) = ""><i class="fa fa-trash" aria-hidden="true" style="color:#840705"></i></a></td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+

@@ -1,0 +1,83 @@
+<nav class="navbar" style="background-color: #7E7A79">
+  <a class="navbar-brand" href="#">
+    <img src="/assets/img/general-logo.png" height="80" class="d-inline-block align-top" alt="">
+  </a>
+</nav>
+<div class="wrapper">
+  <div class="container-fluid">
+    <div class="card text-center" stlye="width:30rem;">
+      <h5 class="card-header"><i class="far fa-user-circle"></i>Register</h5>
+      <div class="card-body">
+        <form class="card-text" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <!-- <div class="form-group">
+            <mat-form-field>
+              <mat-select formControlName="userType" placeholder="User Type" class="form-control" style="border:none;" [ngClass]="{ 'is-invalid': submitted && f.userType.errors }">
+                <mat-option value="1">Superadmin</mat-option>
+                <mat-option value="2">Admin</mat-option>
+              </mat-select>
+              <div *ngIf="submitted && f.userType.errors" class="invalid-feedback">
+                    <div *ngIf="f.userType.errors.required">User Type is required</div>
+                  </div>
+            </mat-form-field>
+          </div> -->
+          <!-- <div class="form-group">
+            <mat-form-field>
+              <mat-select formControlName="museumID" placeholder="Museum ID" class="form-control" style="border:none;" [ngClass]="{ 'is-invalid': submitted && f.museumID.errors }">
+                <mat-option value="1">Warner Transportation Museum</mat-option>
+                <mat-option value="2">Gorgas House Museum</mat-option>
+                <mat-option value="3">UA Museum of Natural History</mat-option>
+                <mat-option value="4">Moundville Archaelogical Park</mat-option>
+                <mat-option value="5">Paul R Jones</mat-option>
+                <mat-option value="6">Unafilliated</mat-option>
+              </mat-select>
+              <div *ngIf="submitted && f.museumID.errors" class="invalid-feedback">
+                    <div *ngIf="f.museumID.errors.required">Museum ID is required</div>
+                  </div>
+            </mat-form-field>
+          </div> -->
+          <div class="form-group">
+            <mat-form-field>
+              <input matInput type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"
+                placeholder="First Name">
+              <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+              </div>
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <mat-form-field>
+              <input matInput type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"
+                placeholder="Last Name">
+              <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+              </div>
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <mat-form-field>
+              <input matInput type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+                placeholder="Username">
+              <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">Username is required</div>
+              </div>
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <mat-form-field>
+              <input matInput type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+                placeholder="Password">
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+              </div>
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <a [routerLink]="['/login']" class="btn btn-link" style="color:white">Cancel</a>
+            <button [disabled]="loading" class="btn btn-primary" style="margin-left:20px;">Register</button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
