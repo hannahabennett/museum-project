@@ -1,0 +1,7 @@
+This past semester, I worked with a team to create a visitor registry system using a LAMP Stack for 5 local museum directors. 
+In my free time I recreated the project using Angular, Node.js, and MongoDB. This project allows you to either register a new account 
+or sign in as a director (You can find the director credentials on the user.ts page in the _models folder.) 
+I used a fake back end to store users, and you will be redirected to a landing page after sign-in. 
+The landing page has a dashboard where you can view reports, go to see the sign in page, or view visitor data. 
+The report page doesn't work yet, but I used PowerBI to create the visualizations.
+I used Node.js to save that data to a mongoDB. I have not finished this project but have most of the functionality working! 
